@@ -1,0 +1,4 @@
+#Fri Mar 22 06:59:44 IST 2019
+base.0=/Users/killerlock/AndroidStudioProjects/data/app/build/intermediates/dex/release/mergeDexRelease/out
+path.0=classes.dex
+renamed.0=classes.dex
