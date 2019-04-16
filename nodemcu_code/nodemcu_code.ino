@@ -34,7 +34,7 @@ pinMode(A0,INPUT);
 void loop() {
   int m;
   m=analogRead(A0);
-  m=(m/1024)*100;
+  m=100-((m/1024)*100);
   float t=dht.readTemperature();
   float h=dht.readHumidity();
   Serial.println("temperature");
@@ -63,7 +63,7 @@ void loop() {
 //  delay(5000);
 //
 HTTPClient http;
-http.begin("http://dweet.io/dweet/for/ajaybingi?temperature="+String(t)+"&Humidity="+String(h));
+http.begin("http://dweet.io/dweet/for/killerlock?temperature="+String(t)+"&Relative_Humidity="+String(h)+"&Soil_mosisture_percentage="+String(m));
 int httpcode=http.GET();
 while(httpcode==0)
 {
